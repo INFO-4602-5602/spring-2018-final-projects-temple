@@ -1,0 +1,22 @@
+div.appBody {
+	margin-top: 5em;
+	margin-bottom: 7em;
+}
+
+div.cancon {
+	width: 512px;
+	height: 512px;
+}
+
+div.row {
+	height: 50%;
+}
+
+div.cancon canvas {
+	width: 100%;
+	height: 100%;
+}
+
+.ui.page.modals.transition.visible {
+    display: flex !important;
+}

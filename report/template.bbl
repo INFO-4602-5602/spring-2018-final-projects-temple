@@ -1,8 +1,43 @@
 \begin{thebibliography}{1}
 
+\bibitem{benari}
+M.~Ben-Ari.
+\newblock Constructivism in computer science education.
+\newblock {\em Journal of Computers in Mathematics \& Science Teaching},
+  20(1):45 -- 73, 2001.
+
+\bibitem{workex}
+W.~M. Carroll.
+\newblock Using worked examples as an instructional support in the algebra
+  classroom.
+\newblock {\em Journal of educational psychology}, 86(3):360--367, 09 1994.
+
+\bibitem{nando}
+N.~de~Freitas.
+\newblock Machine learning - gaussian processes.
+
 \bibitem{GPUjs}
 {\relax GPU.js Contributors}.
 \newblock {\relax GPU.js}.
 \newblock \url{https://github.com/gpujs/gpu.js}, 2018.
+
+\bibitem{kirschner}
+P.~A. Kirschner, J.~Sweller, and R.~E. Clark.
+\newblock Why minimal guidance during instruction does not work: An analysis of
+  the failure of constructivist, discovery, problem-based, experiential, and
+  inquiry-based teaching.
+\newblock {\em Educational Psychologist}, 41(2):75--86, 2006.
+
+\bibitem{Kosara}
+R.~Kosara.
+\newblock Presentation-oriented visualization techniques.
+\newblock {\em IEEE Computer Graphics and Applications}, 36(1):80--85, Jan
+  2016. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}MCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2016\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2}}
+
 
 \end{thebibliography}

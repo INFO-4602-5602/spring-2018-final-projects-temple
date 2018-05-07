@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Button, Container, Grid, Icon, Menu } from 'semantic-ui-react';
+import { Button, Container, Grid, Icon, Menu, Popup } from 'semantic-ui-react';
 
 import About from './components/About';
 
@@ -12,8 +12,8 @@ import * as GPU from 'gpu.js';
 
 const gpu = new GPU();
 
-const RES_X = 4192;
-const RES_Y = 4192;
+const RES_X = 1024;
+const RES_Y = 1024;
 const N_GAUSS = 7;
 
 function randMean() {
@@ -70,7 +70,13 @@ const computeFinalValuesKernel = gpu.createKernel(function(this: any, scale : nu
 }).setOutput([RES_X, RES_Y])
   .setOutputToTexture(true);
 
-const colorMapKernel = gpu.createKernel(function(this: any, inVals : number[][], vMax : number) {
+const coolMapKernel = gpu.createKernel(function(this: any, inVals: number[][], vMax : number) {
+  const scale = (inVals[this.thread.x][this.thread.y] / vMax);
+  this.color(scale, 1-scale, 1);
+}).setOutput([RES_X, RES_Y])
+  .setGraphical(true);
+
+/* const colorMapKernel = gpu.createKernel(function(this: any, inVals : number[][], vMax : number) {
   const scale = (inVals[this.thread.x][this.thread.y] / vMax);
   let red = 255;
   let blue = 0;
@@ -92,7 +98,7 @@ const colorMapKernel = gpu.createKernel(function(this: any, inVals : number[][],
 
   this.color(red, blue, green);
 }).setOutput([RES_X, RES_Y])
-  .setGraphical(true);
+  .setGraphical(true);*/
 
 interface IMainState {
   getCanvas: () => HTMLCanvasElement
@@ -107,8 +113,8 @@ class App extends React.Component<{}, IMainState> {
         console.time('renderCanvas');
         const tx1 = gaussianPDFKernel(N_GAUSS, MEANS, STDS, [RES_X, RES_Y]);
         const tx2 = computeFinalValuesKernel([Math.random()*2.5 + 3, Math.random()*2.5 + 3], [RES_X, RES_Y], tx1)
-        colorMapKernel(tx2, 16);
-        const c = colorMapKernel.getCanvas();
+        coolMapKernel(tx2, 16);
+        const c = coolMapKernel.getCanvas();
         console.timeEnd('renderCanvas');
         return c;
       }
@@ -159,9 +165,11 @@ class App extends React.Component<{}, IMainState> {
         <Menu size="massive" fixed="bottom">
           <Container>
             <Menu.Item position="left">
-              <Button color="red">
-                <Icon name="refresh" /> Initialize
-              </Button>
+              <Popup trigger={<Button color="red"><Icon name="refresh" /> Initialize</Button>}
+                wide={true}>
+                <p>Click this button to get started or restart the model.</p>
+                <p>First, we'll pick five random points to seed the regression.</p> 
+              </Popup>
             </Menu.Item>
             <Menu.Item>
               <Button disabled={true}>

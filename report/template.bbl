@@ -6,6 +6,18 @@ M.~Ben-Ari.
 \newblock {\em Journal of Computers in Mathematics \& Science Teaching},
   20(1):45 -- 73, 2001.
 
+\bibitem{abs_tasks}
+M.~Brehmer and T.~Munzner.
+\newblock A multi-level typology of abstract visualization tasks.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  19(12):2376--2385, Dec 2013. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2013\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}124}}
+
+
 \bibitem{workex}
 W.~M. Carroll.
 \newblock Using worked examples as an instructional support in the algebra
@@ -38,6 +50,18 @@ R.~Kosara.
 }{/}MCG\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}2016\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}2}}
+
+
+\bibitem{Schulz}
+H.~J. Schulz, T.~Nocke, M.~Heitzler, and H.~Schumann.
+\newblock A design space of visualization tasks.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  19(12):2366--2375, Dec 2013. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2013\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}120}}
 
 
 \end{thebibliography}

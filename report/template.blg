@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: template.aux
 The style file: abbrv-doi.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -12,45 +12,45 @@ I was expecting a `,' or a `}'---line 86 of file template.bib
  :  url = [ 
  :          https://www.youtube.com/watch?v=MfHKW5z-OOA }
 I'm skipping whatever remains of this entry
-You've used 6 entries,
+You've used 8 entries,
             2598 wiz_defined-function locations,
-            639 strings with 5447 characters,
-and the built_in function-call counts, 2210 in all, are:
-= -- 325
-> -- 53
-< -- 36
-+ -- 58
-- -- 17
-* -- 112
-:= -- 358
-add.period$ -- 17
-call.type$ -- 6
-change.case$ -- 26
+            655 strings with 5768 characters,
+and the built_in function-call counts, 4370 in all, are:
+= -- 813
+> -- 89
+< -- 120
++ -- 158
+- -- 31
+* -- 191
+:= -- 672
+add.period$ -- 23
+call.type$ -- 8
+change.case$ -- 38
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 58
-empty$ -- 155
-format.name$ -- 16
-if$ -- 515
+cite$ -- 8
+duplicate$ -- 80
+empty$ -- 215
+format.name$ -- 28
+if$ -- 1087
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 4
-newline$ -- 38
-num.names$ -- 12
-pop$ -- 26
+int.to.str$ -- 8
+missing$ -- 6
+newline$ -- 60
+num.names$ -- 16
+pop$ -- 34
 preamble$ -- 1
-purify$ -- 20
+purify$ -- 30
 quote$ -- 0
-skip$ -- 45
+skip$ -- 60
 stack$ -- 0
-substring$ -- 139
-swap$ -- 6
-text.length$ -- 20
+substring$ -- 291
+swap$ -- 8
+text.length$ -- 66
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
+type$ -- 32
 warning$ -- 0
-while$ -- 18
-width$ -- 7
-write$ -- 86
+while$ -- 28
+width$ -- 9
+write$ -- 160
 (There was 1 error message)

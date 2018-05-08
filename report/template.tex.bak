@@ -37,7 +37,7 @@
 %% Abstract section.
 \abstract{Effectively teaching machine learning, with its high cognitive load,
 demands exceptional teaching utilities. Often, students find abstract
-discussions or overly-formal mathematical descriptions either difficult to
+discussions or overly-formal mathematical discriptions either difficult to
 interpret and understand or insufficiently applicable. In this article, I
 explore the application of data visualization techniques to Bayesian
 Optimization (Gaussian Processes) and describe the tasks that students engaged
@@ -82,7 +82,7 @@ understand the mathematical reasoning behind those choices.
 
 \subsection{Why Gaussian Processes?}
 
-The Gaussian Process is an advanced stochastic process which uses a suite of
+The Guassian Process is an advanced stochastic process which uses a suite of
 functions and strategies for optimizing those functions to create estimations
 of the mean and variance over a distribution of other functions\footnote{Prof.\
 Nando de Freitas's video lecture at the University of British Columbia on the
@@ -138,8 +138,8 @@ minds. ``To get people to actually pay attention to a presentation, they need
 to find the views interesting and engaging\ldots Learnability'', Kosara
 declares, ``is part of this''~\cite{Kosara}. If we take Kosara's concerns into
 account, then we should aim to build a tool that (1) clearly shows the state of
-our Gaussian Process, (2) does not necessarily generalize to accommodate
-arbitrary inputs, but (3) sufficiently accommodates student input so that they
+our Gaussian Process, (2) does not necessarily generalize to accomodate
+arbitrary inputs, but (3) sufficiently accomodates student input so that they
 can explore the visualization an an engaging way. By retaining control over the
 system that the Gaussian Process is modeling in our examples, but by enabling
 the student to explore that model at their own pace, I believe that our tool
@@ -171,7 +171,7 @@ that Schulz \textit{et al.} suggest:
 
 Or, in other words, students are \textit{exploring} the data, attempting to
 learn something about the system generating it. They \textit{compare} all of
-the features (*) at one time-step to what they observed previously, noting
+the features (*) at one timestep to what they observed previously, noting
 change and comparing the \textit{structures} that arise in one view of the
 model to the structures that arise in another. And, finally, as Kosara
 suggests, the analysis is focused on a \textit{single} instance of this
@@ -179,9 +179,9 @@ problem.
 
 \subsection{Knowledge Construction}
 
-In Constructivist education paradigms, the presentation of examples is
+In Constructivist eductation paradigms, the presentation of examples is
 essential to the development of accurate knowledge. Mordechai Ben-Ari describes
-Constructivism as ``a theory of learning, which claims that students construct
+constructivism as ``a theory of learning, which claims that students construct
 knowledge rather than merely receive and store knowledge transmitted by the
 teacher''~\cite{benari}. We agree with this assessment, as such the function of
 our visualization is to facilitate model-building. Ultimately the student
@@ -277,11 +277,11 @@ web platform comes with its own challenges. While libraries to perform Bayesian
 Optimization are readily available in Python with copious tutorials and
 examples, on the web, we would have to implement our own Bayesian Optimization
 library in JavaScript from the ground up. In addition, due to modifications we
-made to use the GPU as a co-processor (more on this below), we would
+made to use the GPU as a coprocessor (more on this below), we would
 additionally require a GPU-friendly implementation of the Gaussian Process
 Regression. We believe this is possible with a bit more effort. However, due to
 time and work constraints, our project remains in two pieces: a conceptual UI
-with no Bayesian Optimization engine, and a Pythonic Bayesian Optimizer with no
+with no Baysian Optimization engine, and a Pythonic Bayesian Optimizer with no
 \textit{true} user interface.
 
 \begin{figure}
@@ -323,7 +323,7 @@ in both the X and Y directions).
 
 As a proof of concept, in order to solve this problem, we wrote GPU fragment
 shader programs using the GPU.js library~\cite{GPUjs}. This library
-dynamically recompiles a restricted subset of JavaScript into GLSL shader
+dyanamically recompiles a restricted subset of JavaScript into GLSL shader
 code, which then runs on the SIMD processors in the host machine's Graphics
 Processing Unit, resulting in much faster execution. Furthermore, this shader
 code deposits resulting textures directly into an HTML \texttt{<canvas>}
@@ -363,7 +363,7 @@ them useful, we reasoned that the separation of the true function $f(x,y)$ and
 the estimated mean would result in the most effective and obvious comparisons
 between the two. The acquisition function and sampled point plots inform both
 each other and the user of the context on which the decision to choose a new
-point is based. This facilitates the core aspect of teaching in Constructivist
+point is based. This faciliates the core aspect of teaching in Constructivist
 paradigms: effective model building\footnote{\textbf{Author's Note}: the design
 and implementation of this tool helped this author understand Bayesian
 Optimization and Gaussian Processes, which are the subject of some of the
@@ -378,8 +378,8 @@ located within the \texttt{proto-numpyengine} subdirectory of our project
 repository.
 
 Second, we have developed the beginnings of a rich and modern User Interface,
-with considerations made for how its design effectively encourages students to
-utilize it in the pursuit of learning-driven data-visualization tasks. We made
+with considerations made for how its design effictively encourages students to
+utilize it in the pursuit of learning-driven data-vizualization tasks. We made
 some significant technological improvements to the process by which plot images
 are rendered in this version of the tool, and, although it is only capable of
 rendering static functions (like those described in Section 3 above), it is
@@ -395,7 +395,7 @@ even attempt to rehabilitate, refactor, or otherwise restore the Python
 implementation. Were time permitting, all further engineering effort would be
 dedicated to the integration of the subroutines necessary to perform Bayesian
 Optimization into our web-based Concept UI.\@We feel that this project has
-provided a unique opportunity to explore various technologies (such as shader
+provided a unique opportunity to explore various technlogies (such as shader
 programming) and their applications towards data visualization. As well, it has
 enabled us to explore data visualization through a less-commonly appreciated
 lens.
